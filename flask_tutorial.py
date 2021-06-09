@@ -6,20 +6,18 @@ import uuid
 
 from flask import Flask
 app = Flask(__name__)
-my_uuid = uuid.uuid4
+my_uuid = uuid.uuid4()
 print(str(my_uuid))
 
-@app.route('/titanic_wipeout')
+@app.route('/Hello')
 def hello_world():
-    return 'Hello World!'
+    ret = '<p>Hello World! '+my_uuid +' <p>'
+    return ret
 
-@app.route('/titanic_predict')
-def bye_world2():
-    return 'Bye World!'
-
-@app.route('/titanic_train')
-def bye_world3():
-    return 'Bye World!'
+@app.route('/bye')
+def bye_world():
+    ret = '<p>Hello World! '+my_uuid +' <p>'
+    return ret
 
 
 if __name__ == '__main__':
