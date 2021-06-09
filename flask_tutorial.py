@@ -1,13 +1,9 @@
-
-
-
 import uuid
 
 
 from flask import Flask
 app = Flask(__name__)
-my_uuid = uuid.uuid4()
-print(str(my_uuid))
+my_uuid = str(my_uuid)
 
 @app.route('/Hello')
 def hello_world():
